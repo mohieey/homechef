@@ -1,0 +1,29 @@
+.displayTableCell{
+    background: white !important;
+}
+
+.btnPrimary{
+    border:none;
+	
+	border-radius:25px;
+	/* background:rgba(255,255,255,.1); */
+	background: #008600;
+	border: 1px solid #0086008a;
+    color: #fff;
+}
+
+.redirectToLogin{
+    color: #008600;
+    cursor: pointer;
+    text-align: center;
+}
+
+.displayTable{
+    background-color: white;
+    color: #454851;
+    width: 50%;
+    margin-top: 40px;
+    border-radius: 3px;
+    padding: 25px 25px 1px 25px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}

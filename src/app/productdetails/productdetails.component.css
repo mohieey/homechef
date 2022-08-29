@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    color: #666C73;
+}
+
+.btn-back{
+    text-decoration: none;
+    color: #8C9196;
+    opacity: .8;
+}
+.btn-back:hover{
+    opacity: 1;
+}
+.bg-para{
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    display: inline-block;
+    line-height: 1;
+    padding: 0.6em 0.9em;
+    border-radius: 4px;
+    margin-right: 0.2em;
+    color: #fff;
+    background-color: #008600;
+}
+.title-details{
+    color: #404851;
+    font-weight: 500;
+}
+.para-details{
+    color: #767d85;
+}
+.befor{
+    width: 60px;
+    border: 3px solid #404851;
+}
+.green-dot-icon{
+    color: #008600;
+    font-size: .4rem;
+    margin: 1px;
+}
+.trans-dot-icon{
+    color: transparent;
+    border: .1px solid #404851;
+    border-radius: 50%;
+    font-size: .3rem;
+    margin: 1px;
+}
+.ul-icons li{
+    width: 35px;
+    height: 35px;
+    line-height: 2;
+    text-align: center;
+    cursor: pointer;
+}
+.main-img img{
+    width: 100%; 
+    min-height: 400px; 
+}
+
+.pop-para{
+    width: 250px;
+    min-height: 180px;
+    background-color: rgba(0, 0, 0, .9);
+    color: #fff;
+    text-align: center;
+    display: none;
+    font-size: 14px;
+    line-height: 1.3;
+    border-radius: 5px;
+}
+.show:hover .pop-para{
+    display: inline-block;
+
+}
+.right-sec{
+    background-color: #F5F5F6;
+    border-radius: 5px;
+}
+.green-titl{
+    color: #008600;
+}
+.list-border li{
+    line-height: 3;
+}
+.checkbox-style li{
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+.checkbox-style li input{
+    margin-right: 8px;
+    font-size: 1.5rem;
+    border: 1px solid black;
+}
+.customize-div{
+    border: .5px solid #c3c4c5;
+    padding: 20px;
+}
+.recit-cart img{
+    width: 100%;
+}
+
+.top-footer{
+    background: url(https://homechef.imgix.net/https%3A%2F%2Fs3.us-west-2.amazonaws.com%2Fasset.homechef.com%2Flanding_pages%2Fheros%2Ffooter_cta.jpg?ixlib=rails-1.1.0&crop=entropy&fit=crop&w=2800&h=752.8888888888889&auto=format&s=5670efd17e97a656afeb0e1360dec83b) no-repeat center/cover;
+    text-align: center;
+    font-weight: bold;
+}
+.top-footer-title{
+    color: #008600;
+}
+@media screen and (max-width:770px) {
+    .main-div{
+        width: 100% !important;
+    }
+    .main-icons{
+        width: 20%;
+    }
+    .div-main-icons{
+        width: 80%;
+    }
+}

@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { VerifyEmailAddressComponent } from './verify-email-address.component';
+
+describe('VerifyEmailAddressComponent', () => {
+  let component: VerifyEmailAddressComponent;
+  let fixture: ComponentFixture<VerifyEmailAddressComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ VerifyEmailAddressComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(VerifyEmailAddressComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

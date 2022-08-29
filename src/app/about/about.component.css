@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+.green{
+    color: #008600;
+    font-weight: 700;
+}
+.gray{
+    color: #404997be;
+    font-weight: 600;
+    
+    /* width: 75%;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 60px; */
+}
+.bg-slider{
+    height: 55vh;
+    align-items: center;
+    background: url(/assets/img/sliderItWork.jpg) no-repeat center/cover;
+    line-height: 3;
+}
+.bg-slider h1{
+    font-size: 4rem;
+    align-items: center;
+    position: relative;
+    top: 20vh;
+}
+.card-mail{
+    background-color: #F5F5F6;
+}
+.bt{
+    background-color: #008600;
+    color: #fff;
+    border: 1px solid #008600;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 820px) and (min-width: 771px){
+    .textdata{
+    margin-top: -20px !important;
+    }
+}
+
+@media only screen and (max-width: 770px) and (min-width: 701px){
+    .textdata{
+    margin-top: -50px !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .textdata{
+    width: 100%;
+    margin-top: 0;
+    }
+    .textimg{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 0;
+    }
+    .card-mail{
+        width: 100%;
+    }
+    .last-div{
+        width:100%
+    }
+ }
+
+.h2-size{
+    font-size: 23px;
+}
+.para-size{
+    font-size: 18px;
+    line-height: 1.4;
+}

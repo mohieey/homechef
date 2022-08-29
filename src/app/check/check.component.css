@@ -1,0 +1,167 @@
+
+*::selection {
+    background: #007200;
+    color: white;
+}
+main{
+    min-height: 90vh;
+}
+.bg-thank{
+    background:rgba(0, 0, 0, .7) url(/assets/img/than.jpg) no-repeat center/cover;
+    background-blend-mode: multiply;
+    color: #fff;
+    border: none;
+}
+.donOrder {
+    background-color: #008600;
+    color: white;
+    width: 50%;
+    padding: 8px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: auto;
+}
+.donOrder:hover , .submit:hover{
+    background-color: #025802;
+}
+.container {
+    padding: 20px 0;
+}
+.container .row .myOrder {
+    padding: 0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    height: fit-content;
+    
+}
+.container .row .myOrder h1 {
+    text-align: right;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.container .row .myOrder .table {
+    width: 100%;
+}
+.container .row .myOrder .table tr {
+    direction: ltr;
+    padding: 50px;
+    line-height: 30px;
+}
+.container .row .myOrder .checkOutDiv {
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.container .row .myOrder .checkOutDiv .form-check {
+    display: flex;
+}
+.container .row .myOrder .checkOutDiv .form-check .form-check-label {
+    margin-right: 40px;
+}
+.container .row .myOrder .checkOutDiv .form-check .form-check-input {
+    box-shadow: none;
+}
+.container .row .myOrder .checkOutDiv .check1 {
+    background-color: #ddddfd;
+    margin: 10px 0;
+    padding: 10px;
+}
+.container .row .myOrder .checkOutDiv .check2 {
+    background-color: #ddddfd;
+    padding: 20px;
+    margin-top: 10px;
+}
+.container .row .myOrder .checkOutDiv .check2 input {
+    outline: none;
+    border: 1px solid #0086003f;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.container .row .myOrder .donOrderBTN , .submit {
+    background-color: #008600;
+    color: white;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.container .row .myOrder .donOrderBTN:hover , .submit:hover{
+    background-color: #025802;
+}
+.container .row .formDiv {
+    direction: ltr;
+    height: fit-content;
+    padding: 30px;
+}
+.container .row .formDiv h1 {
+    font-size: 20px;
+}
+.container .row .formDiv form .row {
+    margin: 15px 0;
+}
+.container .row .formDiv form .row input,
+.container .row .formDiv form .row select {
+    box-shadow: none;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+.bg-title{
+    background:#fff url(/assets/img/cart.png) no-repeat center/cover;
+    margin-top: 0%;
+}
+@media only screen and (max-width: 992px) {
+    .container .row {
+        display: flex;
+        flex-direction: column-reverse;
+   }
+}
+
+.bigbox{
+    /* background-color: white; */
+    border-radius: 10px;
+    padding: 25px 25px 1px 25px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   
+} 
+
+.flower{
+    position: relative;
+    left: 0;
+    right: 200px;
+}
+
+.bg-back{
+    background: rgba(0, 0, 0, .7) url(/assets/img/slid.jpg) no-repeat center/cover ;
+    background-blend-mode: multiply;
+    margin-top: 0%;
+    min-height: 100vh;
+}
+.inpu{
+    outline: none;
+    border: 6px solid #008600;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.bg-im{
+    background: url(/assets/img/sliderItWork.jpg) no-repeat center/cover;
+    /* height: 80vh; */
+    line-height: 2;
+    /* line-height: 1; */
+}
+.chec{
+    font-size: 18px;
+}
+.text-end{
+    font-size: 16px;
+}

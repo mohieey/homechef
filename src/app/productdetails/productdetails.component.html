@@ -1,0 +1,334 @@
+<!-- <div class=" rowscr row g-4">
+    <div *ngFor="let pro of finalproduct" class="  card m-4 p-1 imgcart" style="width: 14rem; height: 25rem;">
+        <img src="{{pro.image_url}}" class="card-img-top w-100 h-50 "  alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-center bg-light p-1 m-1">{{pro.title}}</h5>
+          <p style="color:#a51731; font-weight: bold;   " class="card-text text-center m-2">EGP {{pro.price}}</p>
+        </div>
+      </div>
+</div> -->
+
+
+<main class="container m-auto col-10 mt-5">
+    <br>
+  <section class="m-auto mt-2" >
+      <div >
+          <a routerLink="/menu" class="btn-back">
+              <i class="fas fa-arrow-left"></i>
+              Back to search results
+          </a>
+      </div>
+  </section>
+  <section *ngFor="let pro of finalproduct" class="mt-3">
+      <div  class="after">
+          <p class="bg-para">{{pro.title}}</p>
+          <h1 class="mb-0 title-details">{{pro.discraption}}</h1>
+          <h3 class="h5 mt-0 para-details">{{pro.category}}</h3>
+      </div>
+      <div class="mt-3 befor"></div>
+  </section>
+  <section>
+      <div class="row m-0 g-md pt-3 p-0">
+          <div class=" col-lg-4">
+              <p class="mb-1">Prep & Cook Time: <span>45-55 min.</span></p>
+              <p>Difficulty Level: <span>Expert 
+                  <i class="fas fa-circle green-dot-icon"></i>
+                  <i class="fas fa-circle green-dot-icon"></i>
+                  <i class="fas fa-circle green-dot-icon"></i>
+              </span></p>
+          </div>
+          <div class="col-lg-4">
+              <p class="mb-1">Cook Within: <span>5 days</span></p>
+              <p>Difficulty Level: <span>Expert 
+                  <i class="fas fa-circle trans-dot-icon"></i>
+                  <i class="fas fa-circle trans-dot-icon"></i>
+                  <i class="fas fa-circle trans-dot-icon"></i>
+              </span></p>
+          </div>
+          <div class="col-lg-4 mt-1 p-1">
+              <ul class="list-unstyled row d-flex ul-icons">
+                  <li class="col-1 bg-primary m-1">
+                      <i class="fab fa-facebook-f text-white"></i>
+                  </li>
+                  <li class="col-1 bg-info text-center m-1">
+                      <i class="fab fa-twitter text-white text-center"></i>
+                  </li>
+                  <li class="col-1 bg-danger m-1">
+                      <i class="fab fa-pinterest-p text-white"></i>
+                  </li>
+                  <li class="col-1 bg-secondary m-1">
+                      <i class="fas fa-envelope text-white"></i>
+                  </li>
+                  <li class="col-1 bg-dark m-1">
+                      <i class="fas fa-fax text-white"></i>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </section>
+  <section *ngFor="let pro of finalproduct">
+      <div class="main-img ">
+          <img src="{{pro.image_url[0]}}" alt="" />
+      </div>
+  </section>
+  <section>
+      <div class="mt-3">
+          <p>Contains: <span>Milk, Eggs, Wheat</span></p>
+      </div>
+      <div>
+          <p style="font-weight: 500;" class="show"  tabindex="6" data-toggle="tooltip" title="All ingredients are individually packaged, but our central facility is not certified allergen-free. Furthermore, ingredient contents may vary. Please check ingredient packaging for allergens and nutrition facts. If you have serious allergies, please use your best judgment or consult a health professional">A note about serious food allergies</p>
+          <span class="pop-para">All ingredients are individually packaged, but our central facility is not certified allergen-free. Furthermore, ingredient contents may vary. Please check ingredient packaging for allergens and nutrition facts. If you have serious allergies, please use your best judgment or consult a health professional to decide if our meals are safe for you!</span>
+      </div>
+  </section>
+  <section *ngFor="let pro of finalproduct">
+      <div class="row">
+          <div class="col-lg-2">
+              <img src="{{pro.image_url[1]}}" alt="">
+              <p class="mt-3 mb-0">Chef</p>
+              <p class="mt-0">David Padilla</p>
+              <div class="mt-3 befor"></div>
+          </div>
+          <div class="col-lg-10 mt-5 fs-6">
+              <p>The funky depth of blue cheese and the sweet tang of caramelized onion, then doused in red wine, is a marriage made in heaven. They bring their love to the meaty burger, and all three worm their way into your heart once you have one bite. This meal is really a love connection all the way through.</p>
+          </div>
+      </div>
+  </section>
+  <section>
+      <div class="m-4 mb-3">
+          <button routerLink="/auth-account" class="btn btn-danger text-white m-auto d-block">Sign Up Today</button>
+      </div>
+  </section>
+  <section>
+      <div class="row">
+          <div class="col-lg-9">
+              <h2 class="green-titl">In Your Box <span class="fs-5 ">(serves 2)</span></h2>
+              <hr>
+              <ul class="list-unstyled d-flex flex-wrap">
+                  <li class="col-6">2 Russet Potatoes</li>
+                  <li class="col-6">1 Red Onion</li>
+                  <li class="col-6">2 oz. Red Cooking Wine</li>
+                  <li class="col-6">½ oz. Baby Arugula</li>
+                  <li class="col-6">1 Rosemary Sprig</li>
+                  <li class="col-6">10 oz. Ground Beef</li>
+                  <li class="col-6">2 Brioche Buns</li>
+                  <li class="col-6">1 oz. Blue Cheese Crumbles</li>
+                  <li class="col-6">1 tsp. Sugar</li>
+                  <li class="col-6">½ tsp. Garlic Pepper</li>
+              </ul>
+              <p class="mt-5">
+                  Due to our just-in-time sourcing model, we may have to send you a substitute ingredient. Not to worry! We make sure every ingredient sent to you meets our high quality standards. We’ll keep you informed should a switch occur, so please check the ingredient labels in your meal bag.
+              </p>
+          </div>
+          <div class="col-lg-3 p-4 right-sec">
+              <h5 class="fs-6 text-black">Nutrition <span>(per serving)</span></h5>
+              <ul class="list-unstyled list-border">
+                  <li>Calories<strong class="float-end">980</strong></li>
+                  <li>Carbohydrates <strong class="float-end">93g</strong></li>
+                  <li>Fat<strong class="float-end">47g</strong></li>
+                  <li>Protein<strong class="float-end">42g</strong></li>
+                  <li>Sodium<strong class="float-end">1300mg</strong></li>
+              </ul>
+          </div>
+      </div>
+  </section>
+  <section>
+      <div class="mt-5">
+          <h2 class="green-titl">Recipe Steps</h2>
+          <hr>
+          <h5>You Will Need</h5>
+          <ul class="d-flex ps-0">
+              <li class="list-unstyled me-5">Olive Oil</li>
+              <li class="me-5">Pepper</li>
+              <li class="me-5">Salt</li>
+              <li class="me-5">Cooking Spray</li>
+          </ul>
+          <ul class="d-flex ps-0">
+              <li class="list-unstyled me-5">1 Medium Non-Stick Pan</li>
+              <li class="me-5">1 Baking Sheet</li>
+              <li class="me-5"> 1 Large Non-Stick Pan</li>
+          </ul>
+      </div>
+      <div>
+          <h5>Before You Cook</h5>
+          <ul class="list-unstyled checkbox-style">
+              <li>
+                  <input type="checkbox" id="">
+                  <label for="">If using any fresh produce, thoroughly rinse and pat dry</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="">
+                  <label for="">Turn oven on to 450 degrees. Let preheat, at least 10 minutes</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="">
+                  <label for="">Prepare a baking sheet with foil and cooking spray</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="">
+                  <label for="">Upon delivery, remove potatoes from meal bag and store at room temperature</label>
+              </li>
+          </ul>
+      </div>
+  </section>
+  <section>
+      <div class="mt-3">
+          <h5>Cooking Guidelines</h5>
+          <p>
+              To ensure food safety, the FDA recommends the following as minimum internal cooking temperatures:
+          </p>
+          <ul class="list-unstyled d-flex flex-wrap">
+              <li>Steak and Pork 145° F (rest cooked meat, 3 minutes) | </li>
+              <li>Seafood 145° F | </li>
+              <li>Chicken 165° F | </li>
+              <li>Ground Beef 160° F | </li>
+              <li>Ground Turkey 165° F | </li>
+              <li>Ground Pork 160° F</li>
+          </ul>
+      </div>
+  </section>
+  <section>
+      <div class="customize-div">
+          <h5>Customize It Instructions</h5>
+          <p>
+              If using <strong>20 oz. ground beef</strong>, follow same instructions as 10 oz. ground beef, forming 4 patties and stacking 2 to serve.
+          </p>
+          <p>
+              If using<strong> ground turkey</strong>, follow same instructions as ground beef in Steps 2 and 5, cooking until turkey reaches minimum internal temperature, 6-8 minutes per side.
+          </p>
+          <p>
+              If using <strong>ground pork</strong>, follow same instructions as ground beef in Steps 2 and 5, cooking until pork reaches minimum internal temperature, 4-6 minutes per side.
+          </p>
+          <p>
+              If using <strong>Impossible burger</strong>, follow same instructions as ground beef in Steps 2 and 5, cooking until burger is heated through, 4-6 minutes per side.
+          </p>
+      </div>
+  </section>
+  <section>
+      <div class="row cols-xl-4" >
+          
+          <div class="main-div col-md-4 col-6 recit-cart mt-5">
+              <img src="https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Frecipe%2Fimage%2F75254%2FFries__1_.jpg?ixlib=rails-1.1.0&w=1500&auto=format&s=a0f8e58e01e4e6b11109d67a57708f2d" alt="">
+              <h4>Roast the Fries</h4>
+              <p>
+                  Cut potatoes into ¼" fries and pat dry.
+              </p>
+              <p>
+                  Place fries on prepared baking sheet and toss with 1 Tbsp. olive oil, garlic pepper, 1/4 tsp. salt, and a pinch of pepper. Massage oil and seasoning into fries.
+              </p>
+              <p>
+                  Spread into a single layer. Roast in hot oven until lightly browned, 25-28 minutes, tossing fries halfway through.
+              </p>
+              <p>
+                  Carefully remove fries from oven and toss with 1 tsp. minced rosemary (prepared in a later step). Baking sheet will be hot! Use a utensil.
+              </p>
+              <p>
+                  While potatoes roast, continue recipe.
+              </p>
+          </div>
+
+          <div class="main-div col-md-4 col-6 recit-cart mt-5">
+              <img src="https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Frecipe%2Fimage%2F75257%2F_553006.001.01_StepShots_1_of_4_.jpg?ixlib=rails-1.1.0&w=1500&auto=format&s=f9b9b37e98754a5f83d93f35b76dee6e" alt="">
+              <h4>Prepare the Ingredients</h4>
+              <p>
+                  Stem and mince rosemary.
+              </p>
+              <p>
+                  Halve and peel onion. Slice halves into thin strips.
+              </p>
+              <p>
+                  Form ground beef into two patties, about 5" in diameter. Season both sides with a pinch of salt and pepper.
+              </p>
+          </div>
+
+          <div class="main-div col-md-4 col-6 recit-cart mt-5">
+              <img src="https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Frecipe%2Fimage%2F75260%2F_553006.002.01_StepShots_3_of_4_.jpg?ixlib=rails-1.1.0&w=1500&auto=format&s=e6834ec13bba4e3dcb4155cf51d9d85b" alt="">
+              <h4>Cook the Onion</h4>
+              <p>
+                  Place a medium non-stick pan over medium heat and add 2 tsp. olive oil.
+              </p>
+              <p>
+                  Add onion and a pinch of salt to hot pan. Stir occasionally until softened and browned, 10-12 minutes.                </p>
+              <p>
+                  Add sugar and wine. Bring to a simmer.
+              </p>
+              <p>
+                  Once simmering, stir occasionally until wine is almost entirely evaporated, 1-2 minutes.
+              </p>
+              <p>
+                  If pan becomes dry, add water, 1 Tbsp. at a time, as needed.
+              </p>
+              <p>
+                  Remove from burner.
+              </p>
+              <p>
+                  While onions cook, continue recipe.
+              </p>
+          </div>
+
+          <div class="main-div col-md-4 col-6 recit-cart mt-5">
+              <img src="https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Frecipe%2Fimage%2F75263%2F_553006.002.01BlueCheeseAndRedWineCaramelizedOnionBurger_Ecomm_1_of_1_.jpg?ixlib=rails-1.1.0&w=1500&auto=format&s=703ef59d8f08f86f6797917dd9cf42fa" alt="">
+              <h4>Toast the Buns</h4>
+              <p>
+                  Place a large non-stick pan over medium heat and add 1 tsp. olive oil.
+              </p>
+              <p>
+                  Add buns, cut side down, to hot pan. Toast until lightly browned, 1-2 minutes.
+              </p>
+              <p>
+                  Transfer buns to a plate. Keep pan over medium heat.
+              </p>
+          </div>
+
+          <div class="main-div col-md-4 col-6 recit-cart mt-5">
+              <img src="https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Frecipe%2Fimage%2F75267%2F_553006.002.01_StepShots_4_of_4_.jpg?ixlib=rails-1.1.0&w=1500&auto=format&s=6920f71363872bf42a33cd781a63e26d" alt="">
+              <h4>Cook Patties and Finish Dish</h4>
+              <p>
+                  Add 1 tsp. olive oil and patties to hot pan. Cook until browned and patties reach a minimum internal temperature of 160 degrees, 4-6 minutes per side.
+              </p>
+              <p>
+                  Remove from burner. Top patties evenly with cheese (to taste). Cover until melted, 1-2 minutes.
+              </p>
+              <p>
+                  Plate dish as pictured on front of card, topping bottom bun with onion, patty, arugula, and top bun. Bon appétit!
+              </p>
+          </div>
+      </div>
+  </section>
+
+  <section>
+      <div class="mt-5 row">
+          <div class="main-icons col-1">
+              <img class="w-100 h-75" src="./assets/img/HomeChef.png" alt="">
+              <!-- <i class="fa-solid fa-utensils logo-sec"></i> -->
+          </div>
+          <div class="div-main-icons col-11">
+              <span>
+                  Home Chef is a meal kit delivery service - order and receive home food delivery weekly. Choose from 21 fresh recipes featuring steak, chicken, pork, fish, vegetarian options, and beyond to meet your cooking needs each week.
+              </span>
+          </div>
+      </div>
+  </section>
+  <section>
+      <div class="text-center mt-5">
+          <h3>More On This Week's Menu</h3>
+          <p>{{date | date: 'EEEE, MMMM d, y'}}</p>
+          <div class="mt-3 befor m-auto"></div>
+      </div>
+  </section>
+  <section>
+      <div class="main-div col-md-4 row col-Xl-6 col-sm-6 mt-5">
+          <img src="https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Fmeal%2Fplated%2F17211%2F256414.001.01CrispyChickenWithLemonPistachioButter_Ecomm1.jpg?ixlib=rails-1.1.0&w=1100&auto=format&s=8d04884bc294dbf63d2dd6b7b58c5963" alt="">
+          <h5>Crispy Chicken with Lemon Pistachio Butter</h5>
+          <p>with zucchini and garlic bread</p>
+      </div>
+  </section>
+  
+</main>
+<section style="position: relative;top: 48px;" class="top-footer mb-0 pb-0">
+  <div class="p-5">
+      <h1 class="top-footer-title">Get started today!</h1>
+      <p>Try Home Chef with no commitment.</p>
+      <p>Skip or cancel anytime.</p>
+      <button routerLink="/home" class="btn btn-danger text-white p-3">Get Started</button>
+  </div>
+</section>

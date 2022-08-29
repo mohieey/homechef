@@ -1,0 +1,244 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+  crossorigin="anonymous"></script>
+
+
+<nav style="position: fixed;top: 0px;z-index: 4444;" class="navbar navbar-expand-lg navbar-dark bg-light w-100 ">
+  <div class="container-fluid">
+    <img routerLink="/home"
+      style="width: 5.3%; height:51px;cursor: pointer;"
+      src="./assets/img/HomeChef.png"
+      alt=""
+    />
+    <button 
+      class="navbar-toggler bg-danger"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarColor02"
+      aria-controls="navbarColor02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse "
+      id="navbarColor02"
+    >
+      <ul class="navbar-nav me-auto">
+        <li
+          style="padding-bottom: 0%; position: relative; top: 9px"
+          class="nav-item px-3 glow"
+        >
+          <div style="text-align: center; font-size: 12px">
+            <i routerLink="/menu"
+              style="color: grey; font-size:23px;cursor:pointer;"
+              class="fas fa-book-open"
+            ></i>
+          </div>
+          <a 
+            style="
+              color: grey;
+              padding-bottom: 0%;
+              padding-top: 0%;
+              font-size: 15px;
+            "
+            class="nav-link "
+            routerLink="/menu"
+            >Our Menu
+            <!-- <span class="visually-hidden">(current)</span> -->
+          </a>
+        </li>
+
+
+        <li
+        style="padding-bottom: 0%; position: relative; top: 9px"
+        class="nav-item px-3 glow"
+      >
+        <div style="text-align: center; font-size: 12px">
+          <i routerLink="/offers"
+            style="color: grey; font-size: 23px;cursor: pointer;"
+            class="fab fa-sketch"
+          ></i>
+        </div>
+        <a
+          style="
+            color: grey;
+            padding-bottom: 0%;
+            padding-top: 0%;
+            font-size: 15px;
+          "
+          class="nav-link "
+          routerLink="/offers"
+          >Offers
+          <!-- <span class="visually-hidden">(current)</span> -->
+        </a>
+      </li>
+
+
+      <li
+      style="padding-bottom: 0%; position: relative; top: 9px"
+      class="nav-item px-3 glow"
+    >
+      <div style="text-align: center; font-size: 12px">
+        <i routerLink="recipselect"
+          style="color: grey; font-size: 23px;cursor: pointer;"
+          class="fas fa-gift"
+        ></i>
+      </div>
+      <a 
+        style="
+          color: grey;
+          padding-bottom: 0%;
+          padding-top: 0%;
+          font-size: 15px;
+        "
+        class="nav-link "
+        routerLink="recipselect"
+        >Boxes
+        <!-- <span class="visually-hidden">(current)</span> -->
+      </a>
+    </li>
+
+
+
+    <li
+    style="padding-bottom: 0%; position: relative; top: 9px"
+    class="nav-item px-3 glow"
+  >
+    <div style="text-align: center; font-size: 12px">
+      <i routerLink="/about"
+        style="color: grey; font-size:23px;cursor:pointer;"
+        class="fab fa-bity "
+      ></i>
+    </div>
+    <a
+      style="
+        color: grey;
+        padding-bottom: 0%;
+        padding-top: 0%;
+        font-size: 15px;
+      "
+      class="nav-link "
+      routerLink="/about"
+      >How It Works
+      <!-- <span class="visually-hidden">(current)</span> -->
+    </a>
+  </li>
+      </ul>
+      <div  class="row endnav me-2 ">
+
+        <div class="col-10 ">
+           <div>
+             <a routerLink="/auth-account" style="margin-top: -10px;" class="usernamr me-3 d-inline-block text-center w-100 " *ngIf="!authService.userData as user">login</a>
+           </div>
+           <div class="allname">
+              <a class=" usernamr" *ngIf="authService.userData as user" ><i class="fas fa-user iconn"></i> {{(user.displayName) ? user.displayName : 'User'}}</a>
+             <div class="logout">
+              <a (click)="authService.SignOut()" >Logout</a>
+             </div>
+           </div>
+            
+       </div> 
+       
+        <div  class="col-2 sala">
+           <a  style="cursor:pointer" data-bs-toggle="offcanvas"  data-bs-target="#offcanvasRight"
+           aria-controls="offcanvasRight">
+           <i  style="font-size: 25px; color: #008600" class="fas fa-cart-plus  " title="cart"></i></a>
+        </div>  
+     </div> 
+    </div>
+  </div>
+</nav>
+
+<!-- //*******************************************************************************// -->
+
+<!-- offcanvas -->
+
+<div >
+
+  <div class="offcanvas offcanvas-end mt-5 m-0" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div  class="offcanvas-header ">
+          <!-- <h5 id="offcanvasRightLabel">Offcanvas right</h5> -->
+          <p class="mt-2 mb-0">Your cart has <b style="color:#008600 ;text-decoration: underline;">{{cart.length}}</b> items</p>
+          <button style="background-color: rgb(99, 96, 96);border-radius: 50%;color: white;" type="button" class="btn-close text-reset mt-1" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" >
+          <!-- *ngIf="quantity>0" -->
+          <div class="basket"> 
+              <div class="overFlowDiv "   >
+                
+                 <div class="row" *ngFor='let pro of cart; let index = index' >
+                      
+                      <div style="justify-content: center;align-items: center;" class="col-4">
+                        <p style="text-align: center;font-weight: 500; margin-bottom: 3%;font-size: 14px;color: rgb(78, 77, 77);">{{pro.item.title}}</p>
+                        <img style="border-radius:10% ;" src="{{pro.item.image_url[0]}}" alt="error in image">
+                      </div>
+
+                      <div style="justify-content: center;text-align: center;align-items: center;" class="col-2">
+                        <span style="margin-left: 13px; text-align: center;font-size: 17px;font-weight: 500;">${{pro.item.price}}</span>
+                      </div>
+                      
+                      <div style="justify-content: center;align-items: center;text-align: center;" class="col-3">
+                         <div class="quantityDiv">
+                          <a (click)="addProduct(index)"><i class="fas fa-angles-up increase"></i></a>
+                          <input min="1" value="{{pro.quantity}}">  
+                          <!-- <input value="5" >    -->
+                         <a (click)="removeProduct(index)"><i class="fas fa-angles-down reduce"></i></a>                        
+                     </div> 
+                     </div>
+                     
+                      <div style="justify-content: center;align-items: center;text-align: center;" class="col-1">
+                          <span style="margin: 20px 0; text-align: center;font-size: 17px;font-weight: 500;">${{pro.item.price*pro.quantity}}</span>
+                      </div>
+
+                      <div style="justify-content: center;align-items: center;text-align: center;" class="col-2">
+                        <a (click)="deleteProduct(index)" ><i  class=" fa fa-trash sala delete"></i></a>
+                      </div>
+
+                      <hr>
+                 </div>
+              </div>
+
+
+              <div class="bottomContent p-2">
+                  <div class="bg-light p-2"  style="direction:ltr; border-radius: 3px;">
+                      <div class="totalPrice">
+                        <span  style="font-weight: bold;color: grey;">Subtotal</span>
+                          <span style="font-size: 17px;">${{cost}}</span>
+                      </div>
+                      <div class="deliverAddress">
+                        <span  style="font-weight: bold;color: grey;">Discount</span>
+                          <span style="font-size: 17px;">$0.0</span>
+                      </div>
+                      <div class="totalPriceAvterService">
+                        <span style="font-weight: bold;color: grey;">Total</span>
+                          <span style="font-size: 17px;">${{cost}}</span>
+                      </div>
+                  </div>
+                  
+                  <div style="margin-top: 12px;" class="buttonsDiv ">
+                      <button routerLink="/check" class="firbtn">
+                          <div class="d-flex" style="justify-content: space-between; ">
+                            <div class="ps-3">CHECKOUT</div>
+                            <div class="pe-3" style="font-size: 23px;">${{cost}}</div>
+                          </div>
+                      </button><br>
+                  </div>
+
+                  <div style="margin-top: 12px;" class="buttonsDiv">
+                    <button routerLink="/cart"  class="firbtn1">VIEW CART</button><br>
+                 </div>
+                 <small style="font-size: 13px;">
+                   <b>Note</b>: Please add address to proceed checkout.
+                 </small><br>
+                 <small style="font-size: 13px;margin-top: 10px;">
+                  <b>Note</b>: Final shipping charges will be calculated on checkout.
+                </small>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

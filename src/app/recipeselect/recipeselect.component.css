@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+}
+.main-color{
+    color: #404851;
+}
+.sv{
+    width: 3rem;
+    height: 2rem;
+}
+
+.option-color{
+    color: #8C97AC;
+}
+.supm{
+    width: 100%;
+    height: 55px;
+    background-color: #008600;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.btn-outline-chef {
+    color: gray;
+    border-color: rgba(128, 128, 128, 0.308);
+}
+.btn-outline-chef:hover {
+    border-color: gray;
+}
+.btn-check:focus + .btn-outline-chef, .btn-outline-chef:focus {
+    box-shadow: 0 0 0 0.20rem #00860036;
+}
+.btn-check:checked + .btn-outline-chef, .btn-check:active + .btn-outline-chef, .btn-outline-chef:active, .btn-outline-chef.active, .btn-outline-chef.dropdown-toggle.show {
+    color: #fff !important;
+    background-color: #008600;
+    border-color: #008600;
+}
+.btn-check:checked + .btn-outline-chef:focus, .btn-check:active + .btn-outline-chef:focus, .btn-outline-chef:active:focus, .btn-outline-chef.active:focus, .btn-outline-chef.dropdown-toggle.show:focus {
+    box-shadow: 0 0 0 0.25rem #00860036;
+}
+.btn-outline-chef:disabled, .btn-outline-chef.disabled {
+    color: #008600;
+    background-color: transparent;
+}
+
+.svg-size{
+    width: 2rem;
+    height: 2.5rem;
+}
+
+.gry{
+    color: gray;
+}
+
+.bordgry{
+    font-weight: 500;
+    color: #404851
+}
+
+.bordgry:hover{
+   border-color: rgba(161, 153, 153, 0.774);
+}
+
+.bg-back{
+    background: url(/assets/img/rrr1.jpg) no-repeat center/cover;
+    line-height: 4;
+}
+
+@media screen and (max-width:1121px) and (min-width:809px) {
+    .easy-sec{
+        min-height: 10vh !important;
+        width: 80%;
+        margin: auto;
+    }
+}
+@media screen and (max-width:808px) {
+    .easy-sec{
+        width: 85%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:1110px) and (min-width:785px) {
+    .easy-sec{
+        min-height: 10vh !important;
+        width: 80%;
+        margin: auto;
+    }
+}
+.para-size{
+    font-size: 15px;
+}
+.h5-res{
+    font-size: 17px;
+    font-weight:600;
+}

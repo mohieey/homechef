@@ -1,0 +1,217 @@
+<main>
+    <header class="encabezado">
+      <b class="text-center pt-4">
+          Order today for $10 off your second order.
+      </b>
+    </header>
+      <div class="row">
+        <section  class="contenido">
+        <h2 class="h1-refresh text-center p-3 me-5">
+            Build a box that fits your needs.
+        </h2>
+        <div class="h5-refresh text-center pt-2 me-5">
+            You can adjust the number of recipes and servings,
+        </div>
+        <div class="h5-refresh text-center  p-1 me-5">
+            as well as skip deliveries anytime.
+        </div>
+        
+        <div class="qusbtn pt-5">
+          <div class="qus p-2 ms-5">
+            How many people are you cooking for?
+          </div>
+      
+          <div  class="btn-group input-height ms-5 p-2 w-75" role="group" aria-label="Basic radio toggle button group">
+            <input  (click)="display2person();var1=2;sum()" type="radio" class="btn-check "  name="btnradio" id="btnradio1" autocomplete="off" checked="">
+            <label class="btn btn-outline-chef inputbox" for="btnradio1">2</label>
+            <input (click)="display4person();var1=4;sum()" type="radio" class="btn-check "  name="btnradio" id="btnradio2" autocomplete="off" checked="">
+            <label class="btn btn-outline-chef inputbox" for="btnradio2">4</label>
+            <input (click)="display6person();var1=6;sum()" type="radio" class="btn-check "  name="btnradio" id="btnradio3" autocomplete="off" checked="">
+            <label class="btn btn-outline-chef inputbox " for="btnradio3">6</label>
+          </div>
+    
+          <div class="qus mb-2 ms-5 pt-3">
+            How many recipes per week do you want to receive?
+          </div>
+          <div class="btn-group input-height ms-5 p-2 w-75" role="group" aria-label="Basic radio toggle button group">
+            <input (click)="display2rec();var2=2;sum()"  type="radio" class="btn-check" value="10" name="btnradio1" id="btnradio4" autocomplete="off" checked="">
+            <label class="btn btn-outline-chef inputbox" for="btnradio4">2</label>
+            <input (click)="display3rec();var2=3;sum()"  type="radio" class="btn-check" name="btnradio1" id="btnradio5" autocomplete="off" checked="">
+            <label class="btn btn-outline-chef inputbox" for="btnradio5">3</label>
+            <input (click)="display4rec();var2=4;sum()"  type="radio" class="btn-check" name="btnradio1" id="btnradio6" autocomplete="off" checked="">
+            <label class="btn btn-outline-chef inputbox" for="btnradio6">4</label>
+            <input (click)="display5rec();var2=5;sum()" type="radio" class="btn-check" name="btnradio1" id="btnradio7" autocomplete="off" checked="">
+            <label class="btn btn-outline-chef inputbox" for="btnradio7">5</label>
+            <input (click)="display6rec();var2=6;sum()" type="radio" class="btn-check" name="btnradio1" id="btnradio8" autocomplete="off" checked="">
+            <label class="btn btn-outline-chef inputbox" for="btnradio8">6</label>
+          </div>
+  
+        <!-- <div class="row">
+          <div style="justify-content: center;text-align: center ;display: flex;"  class="col-6 mt-2">
+            <div class="row">
+              <div class="col-1"><i style="font-size: 25px;" class="fas fa-bullhorn"></i></div>
+              <div class="col-5">
+                <p>Save Time</p>
+                <small>Let us shop, plan and portion for you!</small>
+              </div>
+            </div>
+          </div>
+          <div style="justify-content: end;text-align: center ;" class="col-4">hello</div>
+        </div>
+     -->
+     <div class="row col-11 ms-5 mt-4 ">
+      <div class="col-5 d-flex">
+        <div class="">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="width: 30;">
+          <title>Stopwatch</title>
+          <g fill-rule="evenodd">
+              <path id="stopwatch" fill="#008600" d="M22,4 C22.5522847,4 23,4.44771525 23,5 C23,5.51283584 22.6139598,5.93550716 22.1166211,5.99327227 L22,6 L21,6 L21,7 L20.9988351,7.03322777 C24.4039068,7.25708612 27.4986764,8.61717085 29.907588,10.7379262 L30.835,9.811 L30.5424932,9.51820678 C30.1519689,9.12768249 30.1519689,8.49451751 30.5424932,8.10399322 C30.9029772,7.74350926 31.4702082,7.71577972 31.8624994,8.02080461 L31.9567068,8.10399322 L33.9567068,10.1039932 C34.3472311,10.4945175 34.3472311,11.1276825 33.9567068,11.5182068 C33.5962228,11.8786907 33.0289918,11.9064203 32.6367006,11.6013954 L32.5424932,11.5182068 L32.249,11.225 L31.3180793,12.1563154 C33.6113745,14.7907359 35,18.2334494 35,22.0005 C35,30.2841191 28.2839504,37.0005 20,37.0005 C11.7160496,37.0005 5,30.2841191 5,22.0005 C5,18.2339239 6.38827573,14.7916032 8.68105417,12.1573109 L7.75,11.226 L7.45710678,11.5182068 C7.06658249,11.9087311 6.43341751,11.9087311 6.04289322,11.5182068 C5.68240926,11.1577228 5.65467972,10.5904918 5.95970461,10.1982006 L6.04289322,10.1039932 L8.04289322,8.10399322 C8.43341751,7.71346893 9.06658249,7.71346893 9.45710678,8.10399322 C9.81759074,8.46447718 9.84532028,9.03170824 9.54029539,9.42399944 L9.45710678,9.51820678 L9.165,9.811 L10.092412,10.7379262 C12.5015598,8.61696294 15.5967,7.25681945 19.0021663,7.03316196 L19,7 L19,6 L18,6 C17.4477153,6 17,5.55228475 17,5 C17,4.48716416 17.3860402,4.06449284 17.8833789,4.00672773 L18,4 L22,4 Z M20,9.0005 C12.8202847,9.0005 7,14.8207847 7,22.0005 C7,29.1795717 12.8206411,35.0005 20,35.0005 C27.1793589,35.0005 33,29.1795717 33,22.0005 C33,14.8207847 27.1797153,9.0005 20,9.0005 Z M20,11.0005 C20.5128358,11.0005 20.9355072,11.3865402 20.9932723,11.8838789 L21,12.0005 L21,21.5005 C21,22.0527847 20.5522847,22.5005 20,22.5005 C19.4871642,22.5005 19.0644928,22.1144598 19.0067277,21.6171211 L19,21.5005 L19,12.0005 C19,11.4482153 19.4477153,11.0005 20,11.0005 Z"></path>
+              <path id="face" fill="#99CE99" d="M24.1343887,12.8371834 C24.4109269,12.3591195 25.0226527,12.1957506 25.5007166,12.4722887 C28.8761072,14.424798 31,18.0282362 31,22.0009 C31,28.0755147 26.0749549,33.0009 20,33.0009 C13.9250451,33.0009 9,28.0755147 9,22.0009 C9,18.0282362 11.1238928,14.424798 14.4992834,12.4722887 C14.9773473,12.1957506 15.5890731,12.3591195 15.8656113,12.8371834 C16.1421494,13.3152473 15.9787805,13.9269731 15.5007166,14.2035113 C12.7372168,15.8020697 11,18.7494658 11,22.0009 C11,26.9709761 15.0296456,31.0009 20,31.0009 C24.9703544,31.0009 29,26.9709761 29,22.0009 C29,18.7494658 27.2627832,15.8020697 24.4992834,14.2035113 C24.0212195,13.9269731 23.8578506,13.3152473 24.1343887,12.8371834 Z"></path>
+          </g>
+      </svg>
+      </div>
+      <div class="pt-1">
+      <h6 style="color: rgb(95, 93, 93);" class="pb-0 mb-1">Save Time</h6>
+      <small style="font-size: 14px;color: grey;" class="mt-0">Let us shop, plan and portion for you!</small>
+      </div>
+      </div>
+  
+      <div class="col-6 d-flex justify-content-between">
+        <div>
+          <i style="font-size: 20px;" class="fas fa-arrow-down-wide-short shm pe-3 mt-1"></i>
+        </div>
+        <div >
+          <h6 style="color: rgb(95, 93, 93);"class="pb-0 mb-1 mt-1"> Make it Yours</h6>
+          <small style="font-size: 14px;color: grey;" class="mt-0">Choose from 25+ recipe options with Customize It.</small>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="form-group supm-div ps-5 pt-3">
+        <input routerLink="/deliverbox" (click)="send()" class="pt-1 supm" type="submit" name="Continue" value="Continue">
+      </div>
+      <div class="form-group text-center back-div">
+        <a routerLink="/recipselect" class="back">Go Back</a>
+      </div>    
+    </section>
+    
+    <aside  class="contenido-lateral">
+      <h2 class="mt-4 text-center pt-5 fw-bold" style="color: #404851;">Your Box</h2>
+        <div  class="container  d-flex justify-content-between mt-5">
+            <div #2svg style="text-align: center;justify-content: center;padding-top: 14px;display: none;">
+              <ul style="font-size: 25px;"class="list-unstyled ps-3 colr">
+                  <i  class="fa-solid fa-user-group "></i>
+              </ul>
+              <p  class=" ps-4 txt">2 Servings</p>
+            </div>
+  
+            <div #4svg style="text-align: center;justify-content: center;padding-top: 14px;display: none;">
+              <ul style="font-size: 25px;" class="d-flex list-unstyled ps-3 colr">
+                  <li><i class="fa-solid fa-user-group"></i></li>
+                  <li><i class="fa-solid fa-user-group"></i></li>
+              </ul>
+              <p class="ps-2 txt" style="text-align: center;">4 Servings</p>
+            </div>
+  
+            <div #6svg style="text-align: center;justify-content: center;padding-top: 14px;">
+              <ul style="font-size: 25px;" class="d-flex list-unstyled ps-3 colr ">
+                  <li><i class="fa-solid fa-user-group"></i></li>
+                  <li><i class="fa-solid fa-user-group"></i></li>
+                  <li><i class="fa-solid fa-user-group"></i></li>
+              </ul>
+              <p class="ps-2 txt" style="text-align: center;">6 Servings</p>
+            </div>
+  
+  
+            <div style="color: #008600; margin-top:20px;"><i class="fa-solid fa-xmark"></i></div>
+  
+            <div #2rec style="text-align: center;justify-content: center;padding-top: 14px;display: none;">
+              <ul style="font-size: 22px;" class="d-flex list-unstyled ps-4 colr">
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+              </ul>
+              <p class="ps-2 pt-2 txt" style="text-align: center;">2 Recipes</p>
+            </div>
+  
+            <div #3rec  style="text-align: center;justify-content: center;padding-top: 14px;display: none;">
+              <ul style="font-size: 22px;" class="d-flex list-unstyled ps-2 colr">
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+              </ul>
+              <p class="ps-2 pt-1 txt" style="text-align: center;">3 Recipes</p>
+            </div>
+  
+            <div #4rec  style="text-align: center;justify-content: center;padding-top: 14px;display: none;">
+              <ul style="font-size: 22px;" class="d-flex list-unstyled ps-4 colr">
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+              </ul>
+              <p class="ps-4 pt-2 txt" style="text-align: center;">4 Recipes</p>
+            </div>
+  
+            <div #5rec  style="text-align: center;justify-content: center;padding-top: 14px;display: none;">
+              <ul style="font-size: 22px;" class="d-flex list-unstyled ps-0 colr">
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+              </ul>
+              <p class="ps-3 pt-2 txt" style="text-align: center;">5 Recipes</p>
+            </div>
+  
+            <div #6rec  style="text-align: center;justify-content: center;padding-top: 14px;">
+              <ul style="font-size: 20px;" class="d-flex list-unstyled ps-0 colr">
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+                  <li><i class="fas fa-bowl-rice"></i></li>
+              </ul>
+              <p class="ps-2 pt-2 txt" style="text-align: center;">6 Recipes</p>
+            </div>
+        </div>
+        <hr class="m-2">
+        <div class="container  d-flex justify-content-between mt-3">
+          <p class="smalltxt ps-3">Subtotal</p>
+          <p>${{result}}</p>
+        </div>
+        <div class="container  d-flex justify-content-between mt-2">
+          <p class="smalltxt ps-3">Shipping</p>
+          <p>$13.99</p>
+        </div>
+        <hr class="m-2">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button style="font-weight: bold;color: #008600" class="accordion-button collapsed pt-0 pb-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Promo Code or Gift Card
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Enter voucher or gift card code <code><div class="form-group">
+                    <input class="form-control form-control-lg" type="text" placeholder="" id="inputLarge">
+                    <input class="supm" type="submit" name="Continue" value="Apply Code">
+                    
+                  </div></code> </div>
+                </div>
+              </div>
+            </div>
+        <hr class="m-2">
+          
+        <div style="font-weight: 500;" class=" d-flex justify-content-between mt-4 ps-4 ">
+          Your first week total is an estimation based on a per serving price of $9.99. Your weekly price will adjust according to your recipe selections.
+        </div>
+        <div class=" text-center ">
+          <img class="px-14 hidden bp2:block absolute bottom-0 pt-5" width="250" style="margin-top: 3em;" sizes="px" alt="" loading="lazy" src="https://homechef.imgix.net/https%3A%2F%2Fwww.homechef.com%2Fassets%2Fsignup%2Fhome-chef-box-1e704ae86fee90fd8fb7c9f20806d8a1ab0f7a98f69b4eb7522f239da8f407d2.jpg?ixlib=rails-1.1.0&amp;auto=format&amp;s=05a8c5cc9b9d708468884686d46843dc">
+        </div>
+    </aside>
+      </div>
+  
+  </main>
+  
+  

@@ -1,0 +1,160 @@
+<main class="container-fluid bg-back">
+    <div  class="container pt-5 mt-5">
+        <!-- <h2 class="p-3 " style="direction:rtl"> اتمام الطلب</h2> -->
+        <div style="justify-content: center;" class="row p-4 ">
+            <!-- <div #flower class="col-lg-4 ps-0 ms-0 flower ">
+                <img src="./assets/img/flower.png" alt="">
+            </div> -->
+            <!-- ////////////////////////////// div thanks -->
+            <div #final style="display: none;align-items: center;" class="container ">
+                <div style="display: block;" class="pt-5 col-lg-5 myOrder mt-2 bigbox bg-thank m-auto">
+                    <h1 class="text-center fw-bold fs-1" >Thanks..</h1>
+                    <p class="text-center fw-bold fs-5">Your Order Equip Now</p>
+                    <button  routerLink="/home" class="donOrder m-auto d-block mt-5 col-5">New Order</button>
+                </div>
+            </div>
+            <!-- enddddddddddddddddddddd -->
+            <div #checkout style="display: none;background-color: #F3F4F6;" class="col-lg-5 myOrder mt-2 bigbox  ">
+                <h1 class="" style="font-weight:bold;color: rgb(97, 95, 95);text-align: center;font-size: 29px;">Check Out <i style="color:#008600;" class="fas fa-calculator"></i></h1>
+                <div  style="margin-bottom:18px;">
+                    <table class="table" >
+                        <tbody >
+                            <tr >
+                                <th class="col-6 chec">Total</th>
+                                <td class="col-6 text-end">${{subTotal}}</td>
+                            </tr>
+                            <tr>
+                                <th class="col-6 chec">Delivery</th>
+                                <td class="col-6 text-end">$26</td>
+                            </tr>
+                            <tr class="bg-light">
+                                <th class="col-6 chec">Subtotal</th>
+                                <td style="font-weight: 500;" class="col-6 text-end">${{subTotal+26}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                 <!-- <div class="checkOutDiv">
+                    <div [formGroup]="registerationForm"novalidate class="form-check">
+                        <input class="form-check-input" [value]="1" [(ngModel)]="isVisible" type="radio" name="sh"
+                            id="flexRadioDefault1" checked>
+                            <label class="form-check-label px-2" for="flexRadioDefault1">
+                                Pay On Delivery
+                            </label>    
+                    </div>
+                    <div class="check1" *ngIf="isVisible == 1">pay money on delivery</div>
+                    <div class="form-check">
+                        <input class="form-check-input" [value]="0" [(ngModel)]="isVisible" type="radio" name="sh"
+                            id="flexRadioDefault2">
+                            <label class="form-check-label px-2" for="flexRadioDefault2">
+                                Pay By Credit Cart
+                            </label>
+                    </div>
+                    <div class="check2" *ngIf="isVisible == 0">
+                        <form [formGroup]="registerationForm"novalidate>
+                            <div>
+                                <label for="id">ID Number<span style="color: red;">*</span></label><br>
+                                <input type="text" id="id" style="width: 100%;"
+                                    [class.is-invalid]="creditID?.invalid &&creditID?.touched"
+                                    formControlName="creditID">
+                                <div *ngIf="creditID?.invalid &&creditID?.touched">
+                                    <small class="text-danger" *ngIf="creditID?.errors?.['required']"> you must enter ID Number</small>
+                                </div>
+                            </div>
+    
+                            <div>
+                                <label for="name">ID Name<span style="color: red;">*</span></label><br>
+                                <input type="text"  style="width: 100%;"
+                                [class.is-invalid]="creditName?.invalid &&creditName?.touched"
+                                formControlName="creditName">
+                            <div *ngIf="creditName?.invalid &&creditName?.touched">
+                                <small class="text-danger" *ngIf="creditName?.errors?.['required']"> you must enter ID Name</small>
+                            </div>
+                            </div> 
+    
+                             <div class="row pt-3">  -->
+                                <!-- <div class="col-7">
+                                    <label>Expiration date<span style="color: red;">*</span></label><br>
+                                    <div style="display:flex;" class="forInputs">
+                                        <div style="width: 10%;">
+                                            <input type="number" placeholder="MM" style="width: 100%;" maxlength="2"
+                                                [class.is-invalid]="month?.invalid &&month?.touched"
+                                                formControlName="month">
+                                            <br>
+                                            <div *ngIf="month?.invalid &&month?.touched">
+                                                <small class="text-danger" *ngIf="month?.errors?.['required']">required</small>
+                                            </div>
+                                        </div>
+                                        <div style="width: 10%; margin-right: 15px;">
+                                            <input type="text" placeholder="YY" style="width: 100%;" maxlength="2"
+                                                [class.is-invalid]="year?.invalid &&year?.touched" formControlName="year">
+                                            <div *ngIf="year?.invalid &&year?.touched">
+                                                <small class="text-danger" *ngIf="year?.errors?.['required']">required</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="col-5">
+                                    <label>CVV <span style="color: red;">*</span></label><br>
+                                    <input type="text" placeholder="" style="width: 11%;" maxlength="4"
+                                        [class.is-invalid]="cvv?.invalid &&cvv?.touched" formControlName="cvv">
+                                    <div *ngIf="cvv?.invalid &&cvv?.touched">
+                                        <small class="text-danger" *ngIf="cvv?.errors?.['required']">you must enter CVV</small>
+                                    </div>
+                                </div> -->
+                            <!-- </div>
+                        </form>
+                    </div>
+                </div> -->
+                <button class="donOrderBTN mt-5" (click)="finalll()"> Order Now</button>
+            </div>
+    
+            <div #information  class="col-lg-5 formDiv bigbox bg-title ">
+                <h1 class="pb-1 fw-bold " style="color: black;font-size: 29px;">Personal Information <i style="color: #008600" class="fas fa-file-lines"></i></h1>
+                <hr>
+                <form [formGroup]="registerationForm1"novalidate>
+                    <div class="row" style="display: flex;">
+                        <div class="col">
+                            <label style="font-size: 16px;font-weight: 500;" for="">Full Name<span style="color: red;"> *</span></label>
+                            <input style="border:1px solid #0086006c;" type="text" class="inpu form-control form-control-sm"placeholder='Mark Lorem'  
+                            [class.is-invalid]="fName?.invalid &&fName?.touched" formControlName="fName">
+                            <div  *ngIf="(fName?.invalid && fName?.touched)">
+                                <small class="text-danger" *ngIf="fName?.errors?.['required']">required</small>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <label style=" font-size: 16px;font-weight: 500;" for="">Phone number<span style="color: red"> *</span></label>
+                            <input style="border:1px solid #0086006c;" type="text" class="inpu form-control form-control-sm" maxlength="11"placeholder='01*********'
+                                [class.is-invalid]="number?.invalid &&number?.touched" formControlName="number">
+                            <div *ngIf="(number?.invalid &&number?.touched)||number?.dirty">
+                                <small class="text-danger" *ngIf="number?.errors?.['required']">required</small>
+                                <small class="text-danger" *ngIf="number?.errors?.['pattern']"> number is incorrect</small>
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col">
+                            <label style="font-size: 16px;font-weight: 500;" for="">Address<span style="color: red;"> *</span></label>
+                            <input style="border:1px solid #0086006c;" type="text" class="inpu form-control form-control-sm"
+                                [class.is-invalid]="address?.invalid && address?.touched" formControlName="address"
+                                placeholder='in details'>
+                            <div *ngIf="address?.invalid &&address?.touched">
+                                <small class="text-danger" *ngIf="address?.errors?.['required']">required</small>
+                            </div>
+                        </div>
+                    </div>
+                    <button  class="submit" (click)="Click()"
+                    [disabled]="registerationForm1.invalid" [class.btn-danger]="registerationForm1.invalid" 
+                    > Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</main>

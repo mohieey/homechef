@@ -1,0 +1,137 @@
+<section  class="p-3 mb-2 bg-light text-dark mt-5 ">
+    
+    <h1 class="h1-refresh text-green-100 text-center bp2:text-center bp2:pl-6 pt-20">
+    Explore Our Menus
+    </h1>
+    <div class="h5-refresh text-center text-charcoal-90 bp2:text-center bp2:pl-6 pt-2 pb-24">Meals starting at $6.99 per serving.</div>
+    <div style="text-align: center;align-items: center;" class="col-12 m-auto  ">
+        <input type="text" placeholder="Search all of our recipes"[(ngModel)]="searchTerm" >
+        <button (click)="clearValue()">Search</button>
+    </div>
+
+</section>
+
+<div class="flex menusRedesignFilters filterScrollbar">
+    <div class="traits">
+    <a (click)="clearValue()" class="filter ml-1 inactive btn btnSm btn-refresh btnTextGreen textSm btnOutlined bg-green-50 mb-2 whitespace-nowrap js--amplitudeButton" data-amplitude-event="ourmenu_calorie_conscious.clicked" data-remote="" >
+    Calorie-conscious
+    </a>
+    <a (click)="clearValue()" class=" filter ml-1 inactive btn btnSm btn-refresh btnTextGreen textSm btnOutlined bg-green-50 mb-2 whitespace-nowrap js--amplitudeButton" data-amplitude-event="ourmenu_prep_lt_30.clicked" data-remote="" >
+    &lt; 30min
+    </a>
+    <a (click)="clearValue()" class=" filter ml-1 inactive btn btnSm btn-refresh btnTextGreen textSm btnOutlined bg-green-50 mb-2 whitespace-nowrap js--amplitudeButton" data-amplitude-event="ourmenu_carb_conscious.clicked" data-remote="" >
+    Carb-conscious
+    </a>
+    </div>
+    </div>
+
+
+
+
+
+
+
+    
+
+  <h4 #notfound style="display: none; text-align: center; color: gray;">No Item Found</h4>
+
+
+  <div #allpage class=" main container-fluid p-5 ">
+    <!-- <h2 class="h2-refresh container">Meal Kits</h2> -->
+    <div style="justify-content: center;" class="row row-cols-1 row-cols-md-3 g-4">
+        <div *ngFor="let pro of filteredproducts"  class="col-lg-2 w-lg-14 col-12 card  p-0 m-2  card-hover">
+                    <img class="card-img-top  " src="{{pro.image_url[0]}}" alt="">
+            <div class="p-2 card-body">
+                <p *ngIf="!pro.newProduct" class="cart-title mb-0">{{pro.title}}</p>
+                <p *ngIf="pro.newProduct" style="background-color: #b81c2d;" class="cart-title mb-0">{{pro.title}}</p>
+                <!-- <p  style="background-color:#f07b00 ;" class="cart-title mb-0">{{pro.publisher}}</p> -->
+                <h3 class="mt-2 mb-0 para-cart w-100">{{pro.discraption}}</h3>
+                <p class="mt-1 des mb-0">{{pro.publisher}} </p>
+                <p class="mt-1 des mb-0">{{pro.category}} </p>
+                <small class="price mb-1 mt-1">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+            </div>
+            <div class="mt-0 mb-0 pt-0 mt-0">
+                <ul class="d-flex list-unstyled sml">
+                    <li class="px-1">45-55 MIN |</li>
+                    <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+                    <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+                    <li style="color:grey ;" class="px-1">milk - </li>
+                    <li style="color:grey ;" class="px-1">eggs - </li>
+                    <li style="color:grey ;" class="">wheat</li>    
+                </ul>
+            </div>
+            <div class="card-footer text-center mt-0 mb-0  w-100  ">
+                <small class="small-color endtext" style="cursor: pointer;font-weight:bold;font-size: 13px;" routerLink="/details/{{pro.recipe_id}}">View Customize It Options</small>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  
+
+  <!-- <div #allpage class=" main container-fluid p-4 ">
+    <h2 class="h2-refresh container">Easy Prep Meal Kits</h2>
+    <div style="justify-content: center;" class="row row-cols-1 row-cols-md-3 g-4">
+        <div *ngFor="let pro of allproduct"  class="col-lg-2 w-lg-14 col-12 card  p-0 m-2 card-hover">
+                    <img class="card-img-top h-50 " src="./assets/img/pro.jpg" alt="">
+            <div class="p-3 card-body">
+                <p style="background-color: #b81c2d;" class="cart-title mb-0">{{pro.publisher}}</p>
+                <h3 class="mt-2 mb-0 para-cart">Blue Cheese and Caramelized Onion Burger</h3>
+                <p class="mt-1 des">with brasly and paper </p>
+                <small class="price">$26</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+            </div>
+            <div class="mt-0 mb-0 pt-0 mt-0">
+                <ul class="d-flex list-unstyled sml">
+                    <li class="px-1">45-55 MIN |</li>
+                    <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+                    <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+                    <li style="color:grey ;" class="px-1">milk - </li>
+                    <li style="color:grey ;" class="px-1">eggs - </li>
+                    <li style="color:grey ;" class="">wheat</li>    
+                </ul>
+            </div>
+            <div class="card-footer text-center mt-0 mb-0 bg-light w-100  ">
+                <a style="text-decoration: none;" class="bg-light " routerLink="/details/{{pro.recipe_id}}"><small class="small-color endtext">View Customize It Options</small></a>
+          
+            </div>
+        </div>
+    </div>
+  </div>
+
+  
+
+  <div #allpage class=" main container-fluid p-4 ">
+    <h2 class="h2-refresh container">Bundle and Save</h2>
+    <div style="justify-content: center;" class="row row-cols-1 row-cols-md-3 g-4">
+        <div *ngFor="let pro of allproduct"  class="col-lg-2 w-lg-14 col-12 card  p-0 m-2 card-hover">
+                    <img class="card-img-top h-50 " src="./assets/img/pro.jpg" alt="">
+            <div class="p-3 card-body">
+                <p style="background-color:#f07b00 ;" class="cart-title mb-0">{{pro.publisher}}</p>
+                <h3 class="mt-2 mb-0 para-cart">Blue Cheese and Caramelized Onion Burger</h3>
+                <p class="mt-1 des">with brasly and paper </p>
+                <small class="price">$26</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+            </div>
+            <div class="mt-0 mb-0 pt-0 mt-0">
+                <ul class="d-flex list-unstyled sml">
+                    <li class="px-1">45-55 MIN |</li>
+                    <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+                    <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+                    <li style="color:grey ;" class="px-1">milk - </li>
+                    <li style="color:grey ;" class="px-1">eggs - </li>
+                    <li style="color:grey ;" class="">wheat</li>    
+                </ul>
+            </div>
+            <div class="card-footer text-center mt-0 mb-0 bg-light w-100  ">
+                <a style="text-decoration: none;" class="bg-light " routerLink="/details/{{pro.recipe_id}}"><small class="small-color endtext">View Customize It Options</small></a>
+          
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+ -->

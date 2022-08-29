@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+
+}
+.main-colo{
+    color: #404851;
+}
+.bg-img{
+    background: url(/assets/img/02.png) no-repeat center/cover;
+    line-height: 5;
+    margin-top: 10px;
+    /* width: 100%; */
+}
+.bg-im{
+    background: url(/assets/img/sliderItWork.jpg) no-repeat center/cover;
+    /* height: 80vh; */
+    line-height: 1;
+    /* line-height: 1; */
+}
+
+.main-border{
+    background-color: white;
+    border-radius: 3px;
+    padding: 25px 25px 1px 25px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   
+}
+*::selection {
+    background: #BFE1BF;
+   
+}
+.supm{
+    width: 100%;
+    height: 55px;
+    background-color: #008600;
+    color: #fff;
+    border: none;
+    margin-top: 35px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+
+.bigbox{
+    background-color: white;
+    border-radius: 3px;
+    padding: 25px 25px 1px 25px;
+    margin-bottom: 45px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    margin-top: 45px;
+    
+} 
+
+
+/******************************************************/
+
+
+.randam-card {
+	background-color: #00860007;
+	padding: 5px;
+	border: 1px solid #ddd;
+    border-radius: 8px;
+	margin-bottom: 15px;
+    transition: all 1s ease-in-out;
+    height: 27vh;
+}
+
+
+
+.randam-card h6 { 
+    margin:5px 0 12px;
+    color: #008600;
+}
+
+.randam-card:hover img {
+	transform:scale(1.1,1.1) rotate(360deg);
+	border:1px solid #dfdfdf;
+    opacity: 1;
+}
+.randam-card img {
+	height: 70px;
+	width: 70px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	line-height: 100px;
+    transition: all 1s ease-in-out;
+    opacity: .9;
+}
+
+.randam-card p {
+    margin: 5px;
+}
+
+.cloud{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.bord:hover{
+   border: 1.3px solid rgba(151, 146, 146, 0.733);
+}
+
+.text{
+    color: gray;
+    font-weight: 500;
+    font-size: 12px;
+}
+/****************************************************/
+
+ .bg-thank{
+    background:rgba(0, 0, 0, .7) url(/assets/img/than.jpg) no-repeat center/cover;
+    background-blend-mode: multiply;
+    color: #fff; 
+} 
+.donOrder {
+    background-color: #008600;
+    color: white;
+    width: 50%;
+    padding: 8px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: auto;
+}
+.donOrder:hover , .submit:hover{
+    background-color: #025802;
+}
+.container {
+    padding: 20px 0;
+}
+.container .row .myOrder {
+    padding: 0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    height: fit-content;
+    
+}
+.container .row .myOrder h1 {
+    text-align: right;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.container .row .myOrder .table {
+    width: 100%;
+}
+.container .row .myOrder .table tr {
+    direction: ltr;
+    padding: 50px;
+    line-height: 30px;
+} 
+.bg-back{
+    background: rgba(0, 0, 0, .7) url(/assets/img/slid.jpg) no-repeat center/cover ;
+    background-blend-mode: multiply;
+    margin-top: 5%;
+    height: 100vh;
+
+} 

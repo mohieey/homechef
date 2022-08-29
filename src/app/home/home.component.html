@@ -1,0 +1,436 @@
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+
+<div class="w-100 mainimg mt-5">
+  <img style="height: 450px;" src="./assets/img/frut.png" />
+  <div class="maintext">Meet</div>
+  <div class="maintext1">Home Chef</div>
+  <button routerLink="/recipselect" class="maintext2 btn btn">Pick Your Meals</button>
+  <button routerLink="/menu" style="border-color: rgba(173, 171, 171, 0.644);" class="maintext3 btn btn">Our Menu</button>
+</div>
+<!-- /*********************************************************/ -->
+
+
+<div style="background-color: #fef9f5;" class="container-fluid pt-3  " >
+  <div class="row text-center pb-3 mt-5">
+    <div>
+      <h1 style="color: #008600; font-weight: 600;" class="pb-2 fs-1">Simplify Dinner</h1>
+      <h5 class="gry fontParaSize">Fresh weekly meal kits customized to your liking and</h5>
+      <h5 class="gry fontParaSize">starting at $6.99 per serving.</h5>
+    </div>
+   </div>
+  
+   <div style="justify-content: space-around;" class="row text-center pt-3 pb-5">
+    <div class="col-3">
+      <i style="font-size: 31px;color: #008600" class="fas fa-list-check"></i>
+      <h5 class=" title-para">SELECT</h5>
+      <h6 class="gry fontParaSize">Carb conscious, calorie conscious, vegetarian – we’ve got lots of options to fit.</h6>
+    </div>
+    <div class="col-3">
+      <i style="font-size: 31px;color: #008600" class="fas fa-crop"></i>
+      <h5 class=" title-para">CUSTOMIZE IT</h5>
+      <h6 class="gry fontParaSize">Use our Customize It feature to upgrade, swap, or double up proteins on select meals.</h6>
+    </div>
+    <div class="col-3">
+      <i style="font-size: 31px;color: #008600" class="fas fa-wand-sparkles"></i>
+      <h5 class=" title-para">ENJOY</h5>
+      <h6 class="gry fontParaSize">Effortlessly create and plate your meals in no time. Dinner is solved!</h6>
+    </div>
+   </div>
+ </div>
+ <!-- /***************************************************************** -->
+ 
+
+<div class="p-3">
+<div class=" bigbox">
+    <div class="carousel-inner h-50">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img
+          src="./assets/img/6.png"
+          class="hidden-xs hidden-sm "
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+    </div>
+
+    <swiper  style="justify-content:center; align-items: center;" [slidesPerView]="5" [spaceBetween]="14" [slidesPerGroup]="3" [navigation]="true" class="mySwiper w-100 sefood1">
+      <ng-template  *ngFor="let pro of products " swiperSlide >
+        <div  class="col-lg-11 row-col-md-1  card  p-0 m-2 card-hover">
+          <img class="card-img-top h-50 " src="{{pro.image_url[0]}}" alt="">
+      <div class="p-3 card-body">
+          <p class="cart-title mb-0">{{pro.title}}</p>
+          <h4 class="mt-1 mb-0 para-cart">{{pro.discraption}}</h4>
+          <p class="mt-1 des mb-0">{{pro.publisher}}</p>
+          <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+        </div>
+      <div class="mt-0 mb-0">
+          <ul class="d-flex list-unstyled sml">
+              <li class="px-1">45-55 MIN |</li>
+              <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+              <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+              <li style="color:grey ;" class="px-1">milk - </li>
+              <li style="color:grey ;" class="px-1">eggs - </li>
+              <li style="color:grey ;" class="">wheat</li>    
+          </ul>
+      </div>
+      <div class="card-footer text-center mt-0 mb-0  w-100  ">
+        <small class="small-color endtext" style="cursor: pointer;font-weight:bold;font-size: 13px;" routerLink="/details/{{pro.recipe_id}}">View Customize It Options</small>
+      </div>
+      </div>  
+        </ng-template>
+    </swiper>
+
+    <swiper  style="justify-content:center; align-items: center;" [slidesPerView]="2" [spaceBetween]="1" [slidesPerGroup]="1" [navigation]="true" class="mySwiper w-100 sefood2">
+      <ng-template  *ngFor="let pro of products " swiperSlide >
+        <div  class="col-lg-11 row-col-md-1  card  p-0 m-2 card-hover">
+          <img class="card-img-top h-50 " src="{{pro.image_url[0]}}" alt="">
+      <div class="p-3 card-body">
+          <p class="cart-title mb-0">{{pro.title}}</p>
+          <h3 class="mt-2 mb-0 para-cart">{{pro.discraption}}</h3>
+          <!-- <p class="mt-1 des">{{pro.publisher}}r</p> -->
+          <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+        </div>
+      <div class="mt-0 mb-0">
+          <ul class="d-flex list-unstyled sml">
+              <li class="px-1">45-55 MIN |</li>
+              <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+              <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+              <li style="color:grey ;" class="px-1">milk - </li>
+              <li style="color:grey ;" class="px-1">eggs - </li>
+              <li style="color:grey ;" class="">wheat</li>    
+          </ul>
+      </div>
+      <div class="card-footer text-center mt-0 mb-0  w-100  ">
+        <small class="small-color endtext" style="cursor: pointer;font-weight:bold;font-size: 13px;" routerLink="/details/{{pro.recipe_id}}">View Customize It Options</small>
+      </div>
+      </div>  
+        </ng-template>
+    </swiper>
+  </div>
+  </div>
+  
+
+
+  
+    <div class="p-3">
+    <div class=" bigbox">
+    <div class="carousel-inner h-50">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img
+          src="./assets/img/7.png"
+          class="hidden-xs hidden-sm "
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+    </div>
+
+        <swiper style="justify-content:center; align-items: center;" [slidesPerView]="5" [spaceBetween]="14" [slidesPerGroup]="3" [navigation]="true" class="mySwiper w-100 beef1">
+          <ng-template  *ngFor="let pro of productsteak " swiperSlide >
+            <div  class="col-lg-11 row-col-md-1  card  p-0 m-2 card-hover">
+              <img class="card-img-top h-50 " src="{{pro.image_url[0]}}" alt="">
+          <div class="p-3 card-body">
+              <p style="background-color: #f07b00;" class="cart-title mb-0">{{pro.title}}</p>
+              <h3 class="mt-2 mb-0 para-cart">{{pro.discraption}}</h3>
+              <p class="mt-1 des mb-0">{{pro.publisher}}</p>
+              <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+          </div>
+          <div class="mt-0 mb-0">
+              <ul class="d-flex list-unstyled sml">
+                  <li class="px-1">45-55 MIN |</li>
+                  <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+                  <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+                  <li style="color:grey ;" class="px-1">milk - </li>
+                  <li style="color:grey ;" class="px-1">eggs - </li>
+                  <li style="color:grey ;" class="">wheat</li>    
+              </ul>
+          </div>
+          <div class="card-footer text-center mt-0 mb-0  w-100  ">
+            <small class="small-color endtext" style="cursor: pointer;font-weight:bold;font-size: 13px;" routerLink="/details/{{pro.recipe_id}}">View Customize It Options</small>
+          </div>
+          </div>  
+          </ng-template>
+        </swiper>
+
+        <swiper style="justify-content:center; align-items: center;" [slidesPerView]="2" [spaceBetween]="1" [slidesPerGroup]="1" [navigation]="true" class="mySwiper w-100 beef2">
+          <ng-template  *ngFor="let pro of productsteak " swiperSlide >
+            <div  class="col-lg-11 row-col-md-1  card  p-0 m-2 card-hover">
+              <img class="card-img-top h-50 " src="{{pro.image_url[0]}}" alt="">
+          <div class="p-3 card-body">
+              <p style="background-color: #f07b00;" class="cart-title mb-0">{{pro.title}}</p>
+              <h3 class="mt-2 mb-0 para-cart">{{pro.discraption}}</h3>
+              <p class="mt-1 des">{{pro.publisher}}</p>
+              <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+          </div>
+          <div class="mt-0 mb-0">
+              <ul class="d-flex list-unstyled sml">
+                  <li class="px-1">45-55 MIN |</li>
+                  <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+                  <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+                  <li style="color:grey ;" class="px-1">milk - </li>
+                  <li style="color:grey ;" class="px-1">eggs - </li>
+                  <li style="color:grey ;" class="">wheat</li>    
+              </ul>
+          </div>
+          <div class="card-footer text-center mt-0 mb-0  w-100  ">
+            <small class="small-color endtext" style="cursor: pointer;font-weight:bold;font-size: 13px;" routerLink="/details/{{pro.recipe_id}}">View Customize It Options</small>
+          </div>
+          </div>  
+          </ng-template>
+        </swiper>
+  </div>
+</div>
+
+<!-- /********************************************************************/ -->
+
+<div class="container mb-5">
+  <div style="text-align:  center;  justify-content: space-around; align-items: center;" class="row p-3">
+      <div class="col-6 col-lg-4 me-0">
+         <h2 style="color:#008600 ; font-size: 30px;">Make It Yours</h2>
+         <p style="color: gray; font-size: 17px; font-weight: 500;">Make meals uniquely yours. Upgrade, double-up, add or swap protein on select meals. You’re in control of your dinstiny.*</p>
+         <a routerLink="/recipselect" style="background-color: #008600; color:white ;" href="" class="btn">Plan Your First Week</a>
+      </div>
+      <div class="col-6 col-lg-5 offset-lg-2 ms-0">
+         <img style="width: 100%;" src="./assets/img/first.jpg" alt="">
+      </div>
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+ <div style="text-align: center;  justify-content: space-around; align-items: center;" class="row p-3 ">
+     <div class="col-6 col-lg-4 me-0">
+        <img style="width: 100%;" src="./assets/img/second.jpg" alt="">
+     </div>
+     <div  class="col-6 col-lg-5 offset-lg-2 pe-0 text-center ms-0">
+         <h3 style="color:#008600 ; font-size: 30px; font-weight: 600;">Change It Up</h3>
+         <p style="color: gray;font-size: 17px;font-weight: 500;">Add meals. Edit servings. Or take a week off and fly to Tahiti. Plans and preferences change — we keep up.</p>
+         <a routerLink="/recipselect" style="background-color: #008600; color:white; " href="" class="btn">Dig In</a>
+     </div>
+ </div>
+</div>
+
+<!-- /********************************************************************/ -->
+
+<div style="justify-content: space-around;display: flex;background-color: #0c355b;color: white;" class=" row text-center pt-5 pb-5 mt-5 mb-5 mx-0">
+  <div class="col-3">
+    <h1 class="blue-title">30+</h1>
+    <h5 class="blue-title1">Weekly Choices</h5>
+    <p style="color: rgb(172, 165, 165);">Using Customize It†</p>
+  </div>
+  <div class="col-3">
+    <h1 class="blue-title">#1</h1>
+    <h5 class="blue-title1">in Customer Service*</h5>
+    <p style="color: rgb(172, 165, 165);">* Source: US Grocery Benchmark Study, April 2020, Market Force Information, Inc.</p>
+  </div>
+  <div class="col-3">
+    <h1 class="blue-title">4M+</h1>
+    <h5 class="blue-title1">5-star reviews*</h5>
+    <p style="color: rgb(172, 165, 165);">* Home Chef data 2014 - 2020</p>
+  </div>
+  <div class="col-3">
+    <h1 class="blue-title">200M+</h1>
+    <h5 class="blue-title1">Meals served*</h5>
+    <p style="color: rgb(172, 165, 165);">* Home Chef Internal Report</p>
+  </div>
+ </div>
+
+<!-- /********************************************************************/ -->
+
+
+   
+    <h1 style="color:#008600 ; font-size: 35px; font-weight: 600;" class="text-center">What’s new on Menu</h1>
+    <h4 style="color: gray;" class="text-center fontParaSize">I’m craving  vegetarian meals</h4>
+    <swiper  style="justify-content:center; align-items: center;" [slidesPerView]="5" [spaceBetween]="14" [slidesPerGroup]="3" [navigation]="true" class="mySwiper w-100 mohanad">
+      <ng-template   *ngFor="let pro of productnew " swiperSlide >
+        <div  class="col-lg-11 row-col-md-1  card  p-0 m-2 card-hover ">
+          <img class="card-img-top h-50 " src="{{pro.image_url[0]}}" alt="">
+      <div class="p-3 card-body">
+          <p style="background-color: rgba(180, 76, 76, 0.87)" class="cart-title mb-0">{{pro.title}}</p>
+          <h3 class="mt-1 mb-0 para-cart">{{pro.discraption}}</h3>
+          <p class="mt-1 mb-0 des">{{pro.publisher}}r</p>
+          <!-- <p class="mt-1 mb-0 des">{{pro.category}}</p> -->
+          <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+      </div>
+      <div class="mt-0 mb-0">
+          <ul class="d-flex list-unstyled sml">
+              <li class="px-1">45-55 MIN |</li>
+              <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+              <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+              <li style="color:grey ;" class="px-1">milk - </li>
+              <li style="color:grey ;" class="px-1">eggs - </li>
+              <li style="color:grey ;" class="">wheat</li>    
+          </ul>
+      </div>
+      <div class="card-footer text-center mt-0 mb-0  w-100  ">
+        <small class="small-color endtext" style="cursor: pointer;font-weight:bold;font-size: 13px;" routerLink="/details/{{pro.recipe_id}}">View Customize It Options</small>
+      </div>
+      </div>  
+      </ng-template>
+    </swiper>
+
+    
+
+    <swiper  style="justify-content:center; align-items: center;" [slidesPerView]="2" [spaceBetween]="10" [slidesPerGroup]="1" [navigation]="true" class="mySwiper w-100 mohanad1 ">
+      <ng-template  *ngFor="let pro of productnew " swiperSlide >
+        <div  class="col-lg-11 row-col-md-1  card  p-0 m-2 card-hover ">
+          <img class="card-img-top h-50 " src="{{pro.image_url[0]}}" alt="">
+      <div class="p-3 card-body">
+          <p style="background-color: rgba(180, 76, 76, 0.87)" class="cart-title mb-0">{{pro.title}}</p>
+          <h3 class="mt-2 mb-0 para-cart">{{pro.discraption}}</h3>
+          <p class="mt-1 des">{{pro.publisher}}</p>
+          <p class="mt-1 des">{{pro.category}}</p>
+          <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+      </div>
+      <div class="mt-0 mb-0">
+          <ul class="d-flex list-unstyled sml">
+              <li class="px-1">45-55 MIN |</li>
+              <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+              <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+              <li style="color:grey ;" class="px-1">milk - </li>
+              <li style="color:grey ;" class="px-1">eggs - </li>
+              <li style="color:grey ;" class="">wheat</li>    
+          </ul>
+      </div>
+       <div class="card-footer text-center mt-0 bg-light w-100 ">
+          <small class="small-color">View Customize It Options</small>
+       </div>
+      </div>  
+      </ng-template>
+    </swiper>
+
+    <div >
+      <button routerLink="/menu" class="btn supm mt-3 mb-3">See Full Menu</button>
+    </div>
+    
+  <!-- </div>
+  </div> -->
+
+  <!-- /***********************************************************************/ -->
+
+  <div class="container mt=5">
+    <div style="text-align: center;" class="row mt-5">
+        <h2 style="color: #008600; font-size: 35px;">Stay In the Know</h2>
+        <br>
+        <a class="insta" href=""> <i style="font-weight: bold;" class="fab fa-instagram"></i> Be the first to hear about special offers from Home Chef!</a>
+        <br><br>
+        <div class="col-lg-12 col-12" >
+        <img class="p-2" style="width: 17%;height: 100%;"  src="./assets/img/p (2).jpg" alt="">
+        <img class="p-2" style="width: 17%;height: 100%;"   src="./assets/img/p (3).jpg" alt="">
+        <img class="p-2" style="width: 17%;height: 100%;"   src="./assets/img/p (1).jpg" alt="">
+        <img class="p-2" style="width: 17%;height: 100%;"   src="./assets/img/p (4).jpg" alt="">
+        <img class="p-2" style="width: 17%;height: 100%;"   src="./assets/img/p (5).jpg" alt="">
+        </div>
+        <br><br>
+    </div>
+ </div>
+
+  <!-- /*****************************************************************************/ -->
+
+  
+
+    <!-- <div class="p-3"> 
+    <div class=" bigbox  ">
+    <div class="carousel-inner h-50">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img
+          src="./assets/img/5.png"
+          class="hidden-xs hidden-sm"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <a href="/products" class="btn " id="btnproduct1"
+            >Shop Now</a
+          >
+        </div>
+      </div>
+    </div>
+    
+    <swiper style="justify-content:center; align-items: center;" [slidesPerView]="5" [spaceBetween]="14" [slidesPerGroup]="3" [navigation]="true" class="mySwiper w-100">
+      <ng-template  *ngFor="let pro of products " swiperSlide >
+        <div  class="col-lg-11 row-col-md-1  card  p-0 m-2 card-hover">
+          <img class="card-img-top h-50 " src="./assets/img/pro.jpg" alt="">
+      <div class="p-3 card-body">
+          <p class="cart-title mb-0">{{pro.publisher}}</p>
+          <h3 class="mt-2 mb-0 para-cart">Blue Cheese and Caramelized Onion Burger</h3>
+          <p class="mt-1 des">with brasly and paper</p>
+      </div>
+      <div class="mt-0 mb-0">
+          <ul class="d-flex list-unstyled sml">
+              <li class="px-1">45-55 MIN |</li>
+              <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+              <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+              <li style="color:grey ;" class="px-1">milk - </li>
+              <li style="color:grey ;" class="px-1">eggs - </li>
+              <li style="color:grey ;" class="">wheat</li>    
+          </ul>
+      </div>
+       <div class="card-footer text-center mt-0 bg-light w-100 ">
+          <small class="small-color">View Customize It Options</small>
+       </div>
+      </div>  
+      </ng-template>
+    </swiper>
+
+  </div> 
+</div>  -->
+
+  <!-- //*************************************************// -->
+
+  
+
+ <!-- //***********************************************// -->
+
+ 
+
+
+<!-- /***************************************************************// -->
+
+
+
+  
+  
+
+
+<!-- <swiper [slidesPerView]="5" [spaceBetween]="12" [slidesPerGroup]="4" [navigation]="true" class="mySwiper bor">
+<ng-template *ngFor="let pro of products"   swiperSlide>
+
+  <div  class="col-lg-10 col-md-12  card  p-0 m-2 card-hover">
+    <img class="card-img-top h-50 " src="./assets/img/pro.jpg" alt="">
+<div class="p-3 card-body">
+    <p class="cart-title mb-0">{{pro.publisher}}</p>
+    <h3 class="mt-2 mb-0 para-cart">Blue Cheese and Caramelized Onion Burger</h3>
+    <p class="mt-1 des">with brasly and paper</p>
+</div>
+<div class="mt-0 mb-0">
+    <ul class="d-flex list-unstyled sml">
+        <li class="px-1">45-55 MIN |</li>
+        <li class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+        <li class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+        <li style="color:grey ;" class="px-1">milk - </li>
+        <li style="color:grey ;" class="px-1">eggs - </li>
+        <li style="color:grey ;" class="">wheat</li>    
+    </ul>
+</div>
+<div class="card-footer text-center mt-0 bg-light w-100 ">
+    <small class="small-color">View Customize It Options</small>
+</div>
+</div>  
+
+</ng-template>
+</swiper> -->
+
+
+  
+ 
+ 
+ 

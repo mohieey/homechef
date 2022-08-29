@@ -1,0 +1,116 @@
+<div >
+  <div class="container mt-5">
+    <div  class="row MAINROW mt-5">
+      <div  class="col-lg-9 col-md-8">
+        <div #allcart class="row mainROW bigbox">
+          <div>
+            <div
+              class="row topROW"
+              style="
+                border-bottom: 1px solid rgb(221, 221, 221);
+                font-weight: bold;
+              "
+            >
+              <div style="font-size: 19px;" class="col-5 text-center">Recipe</div>
+              <!-- <div class="col">Qity</div> -->
+              <div style="font-size: 19px;" class="col">Price</div>
+              <div style="font-size: 19px;" class="col">Qity</div>
+              <div style="font-size: 19px;" class="col">Total</div>
+            </div>
+            <div style="border-bottom: 1px solid gray;" class="row bg-light" *ngFor="let pro of cart; let index=index">
+              <div class="col">
+                <img class="img" style="border-radius: 10%;justify-content: center;align-items: center;padding: 0%;" src="{{pro.item.image_url[0]}}" alt="error" />
+              </div>
+              <div style="font-weight: 600;color: gray;" class="col">{{pro.item.title}}</div>
+              <div style="font-weight: 600;color: gray;" class="col">${{pro.item.price}}</div>
+              <div class="col">
+                <div style="justify-content: center" class="quantityDiv">
+                  <a (click)="removeOne(index)"><i class="fas fa-circle-minus "></i></a>
+                  <input class="math" value="{{pro.quantity}}" />
+                  <a  (click)="addOne(index)"><i class="fas fa-circle-plus "></i></a>
+                </div>
+              </div>
+              <div style="font-weight: 600;color: gray;" class="col">${{pro.item.price*pro.quantity}}</div>
+            </div>
+          </div>
+          <div
+            class="row btn-row p-3"
+            style="border-top: 1px solid rgb(221, 221, 221)"
+          >
+            <button #dis (click)="disabledBtn()"
+              style="background-color: gray;"
+              disabled
+              class="btnn btn mx-3"
+            >
+              <i #icon style="opacity: 1;" class="fas fa-check text-primary"></i> Edit
+            </button>
+            <button (click)="deleteAll()" class="btn mx-3 text-light">
+              <i class="fa fa-trash recycl"></i> Clear 
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <h2 #empty class="empty" >Cart Empty!</h2> -->
+
+      <div class="col-lg-3 col-md-4 bigbox1">
+        <h1 style="font-weight: bold; padding-bottom: 10px;color:#008600;font-size: 23px;">Summary</h1>
+        <div class="productDetails">
+          <div style="border-top: 1px solid rgb(221, 221, 221)" class="row">
+            <div class="col-4 title">Subtotal</div>
+            <div style="font-weight: 750;" class="col-8 extraslide">${{total}}</div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 title">Tax</div>
+            <div style="font-weight: 750;" class="col-8 extraslide">${{tax}}</div>
+          </div>
+
+          <div class="betwen row">
+            <div  class="col-4 title">Total</div>
+            <div style="font-weight: 750;" class="col-8 extraslide">
+            ${{total+tax}}
+            </div>
+          </div>
+
+          <div class="row" style="border-top: 1px solid rgb(221, 221, 221)">
+            <div style="font-weight: bold;text-align: center;color: #008600;" class="col">Extra Slides</div>
+
+            <section>
+              <form [formGroup]="form"  novalidate>
+                <div *ngFor="let slide of extraSlides; let i=index" class="row">
+                  <div class="col-6 ps-0 ms-0 title">
+                    <input class="" type="checkbox" formArrayName="selectedSlides" [value]="slide.value" (change)="onCheckboxChange($event)" 
+                  />
+                  {{ slide.name}}
+                  </div>
+                  <div class="col-6 extraslide">
+                    <label style="font-size: 14px;" class="form-check-label  " for="flexCheckDefault">
+                      ${{ slide.value}}
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </section>
+           
+       
+          
+          <div class="row bg-light" style="border-top: 1px solid rgb(221, 221, 221)">
+            <div style="font-weight: bold" class="col-6">Order Total</div>
+            <div style="text-align:end;font-weight: bold;" class="col-6">${{allPrice}}</div>
+          </div>
+        </div>
+        <button routerLink="/check">CHECKOUT</button>
+        <small style="font-size: 12px"
+          ><b>Note</b>:Please add address to proceed checkout.</small
+        ><br />
+        <small style="font-size: 12px"
+          ><b>Note</b>:Final shipping charges will be calculated on checkout
+          page.</small
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+

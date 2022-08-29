@@ -1,0 +1,41 @@
+
+<div style="width: 99%;" class="row mt-5">
+    <div style="background-color: #FEF9F5;height:30vh;align-items: center;" class="col-12 text-center mt-0 ">
+      <h1 style="font-size: 70px;margin-top: 12vh;" class="w-100">Offers</h1>
+    </div>
+    
+  
+  
+  
+  <div #allpage class=" main container-fluid p-5 ">
+      <!-- <h2 class="h2-refresh container">Meal Kits</h2> -->
+      <div style="justify-content: center;" class="row row-cols-1 row-cols-md-3 g-4">
+          <div *ngFor="let pro of filteredproducts"  class="col-lg-2 w-lg-14 col-12 card  p-0 m-2 h-75 card-hover">
+                      <img class="card-img-top  " src="{{pro.image_url[0]}}" alt="">
+              <div class="p-3 card-body">
+                 
+                  <p  style="background-color: #2a7de1;" class="cart-title mb-0">{{pro.title}}</p>
+                  <!-- <p  style="background-color:#f07b00 ;" class="cart-title mb-0">{{pro.publisher}}</p> -->
+                  <h3 class="mt-2 mb-0 para-cart w-100">{{pro.discraption}}</h3>
+                  <p class="mt-0 des">{{pro.publisher}}r</p>
+                  <p style="font-size: 14px;" class=" des mt-0 mb-0">{{pro.category}} </p>
+                  <small style="font-size:15px ;" class="price mb-0">${{pro.price}}</small><small style="font-size:15px ;" class="price1 mb-0 me-3 ms-3"><del style="color:forestgreen;">${{pro.discount}}</del></small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+              </div>
+              <div class="mt-0 mb-0 pt-0 mt-0">
+                  <ul class="d-flex list-unstyled sml">
+                      <li class="px-1">45-55 MIN |</li>
+                      <li  class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
+                      <li class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
+                      <li style="color:grey ;" class="px-1">milk - </li>
+                      <li style="color:grey ;" class="px-1">eggs - </li>
+                      <li style="color:grey ;" class="">wheat</li>    
+                  </ul>
+              </div>
+              <div class="card-footer text-center mt-0 mb-0  w-100  ">
+                <small class="small-color endtext" style="cursor: pointer;font-weight:bold;font-size: 13px;" routerLink="/details/{{pro.recipe_id}}">View Customize It Options</small>
+            </div>
+          </div>
+      </div>
+    </div>
+  
+  

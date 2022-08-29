@@ -1,0 +1,143 @@
+<main>
+    <section class="bg-img">
+        <div class="container">
+            <div class="main-div col-6 m-auto text-center">
+                <div class="text-center pt-5">
+                    <img src="../../assets/images/HomeChef.png" width="104" height="73" alt="">
+                </div>
+                <div class="pt-4">
+                    <h2 class="fw-bold mt-5 fs-3">Enter your email and zip code to start building your box.</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="main-div col-7 m-auto p-4">
+                <form [formGroup]="regestrationEmailForm" >
+                    <div class="form-group email-cont">
+                        <label class="pb-2">Email Address</label>
+                        <input 
+                        type="email" 
+                        #email
+                        [class.is-invalid]="emailFeld?.invalid &&emailFeld?.touched"
+                        formControlName="email" 
+                        placeholder="Email"
+                        class="form-control height-input">
+                        <div class="text-erorr-contan">
+                            <small class="text-danger text-erorr" *ngIf="emailFeld?.invalid &&emailFeld?.touched">This Field is Required*</small>
+                            <small 
+                            class="text-danger text-erorr" 
+                            *ngIf="emailFeld?.errors?.['forbiddenEmail']">
+                            you email must be like exsample name@gmail.come
+                            </small>
+                        </div>
+                    </div>
+                    
+            
+                    <div class="form-group email-cont">
+                        <label class="pb-2 mt-4">Zip Code</label>
+                        <input 
+                        type="number"
+                        #zipCode 
+                        [class.is-invalid]="zipCodeFeld?.invalid &&zipCodeFeld?.touched"
+                        formControlName="zipCode"
+                        placeholder="zipCode" 
+                        class="form-control height-input">
+                        <div class="text-erorr-contan" *ngIf="zipCodeFeld?.invalid &&zipCodeFeld?.touched">
+                            <small 
+                            class="text-danger text-erorr" 
+                            *ngIf="zipCodeFeld?.errors?.['required']">
+                            This Field is Required*</small>
+            
+                            <small 
+                            class="text-danger text-erorr" 
+                            *ngIf="zipCodeFeld?.errors?.['minlength']">
+                            *zipCode minlength is 8 characters</small>
+
+                        </div>
+                        
+                    </div>
+            
+                    <div class="form-group supm-div">
+                        <input (click)="onSubmit()" class="supm" type="submit" name="Continue" value="Continue">
+                    </div>
+                    
+                    <div class="pt-2 d-flex justify-content-between">
+                        <hr class="line-hr">
+                        <p>OR</p>
+                        <hr class="line-hr">
+                    </div>
+
+                    <div class="form-group supm-div">
+                        <a href="" class="your-accont">Continue with your Grocery Account</a>
+                        <a href="" class="seeing">See Accepted Stores</a>
+                    </div>
+                    <div class="form-group back-div">
+                        <a href="" class="back">Go Back</a>
+                    </div>
+                    <div class="form-group para-div">
+                        <p>By continuing, I accept the Home Chef <a href="">Terms </a>and <a href="">Privacy Policy.</a> Already have an account? <a href="">Sign In.</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bg-color">
+        <div class="container">
+            <div class="main-div col-6 m-auto p-4 mb-4 text-center">
+                <h1 class="fs-3 mt-5 mb-5">Frequently Asked Questions</h1>
+                <details>
+                    <summary> Can I choose my recipes?</summary>
+                    <div>
+                        Yes! Every Monday, you’ll receive an email with 20+ meal options to choose from. Make your choice by Friday at noon CST of that week, or go with our recommendations for you.
+                    </div>
+                </details>
+                <details>
+                    <summary> How do I recycle Home Chef?</summary>
+                    <div>
+                        Easy! Our cardboard boxes, bottles and jars are fully recyclable in your curbside bin. Box liners are compostable / recyclable at select facilities and meal bags and cooling packs can be recycled where you bring your #4 and #5 plastics.
+                    </div>
+                </details>
+                <details>
+                    <summary> Can I skip a delivery or cancel my account?
+                    </summary>
+                    <div>
+                        Yes to both. You can skip a weekly delivery by Friday at noon CST the week before your scheduled delivery. And if you need to cancel your Home Chef deliveries for any reason, you can do so under “Account Settings in “My Account”.
+                    </div>
+                </details>
+                <details>
+                    <summary> How much does Home Chef cost?</summary>
+                    <div>
+                        Home Chef meals start at $6.99 per serving. Shipping price will vary depending on your meal plan. You will see your shipping cost at the end of the sign up process. If you have any questions, reach out to customer support.
+                    </div>
+                </details>
+                <details>
+                    <summary> Where does Home Chef Deliver?</summary>
+                    <div>
+                        We deliver coast-to-coast! During signup, you’ll be prompted to enter your zip code to confirm that we deliver to your area.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="foot-color">
+        <div class="container">
+            <div class="d-flex justify-content-between pt-5 pb-5">
+                <div class="col-3">
+                    <p>©2013 - 2022, Relish Labs LLC</p>
+                </div>
+                <div class="col-3 text-end">
+                    <h5>Customer Support</h5>
+                    <p>Mon - Fri 9AM-6PM CST</p>
+                    <p>872-225-2433</p>
+                    <a href="" class="text-decoration-none">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</main>
+
