@@ -1,0 +1,110 @@
+[
+      {
+      "publisher": "My Baking Addiction",
+      "title": "Seafood Pasta",
+      "discraption": "Boiled pasta with shrimps with vegetables and corn oil",
+      "source_url": "http://www.mybakingaddiction.com/spicy-chicken-and-pepper-jack-pizza-recipe/",
+      "recipe_id": "0fb8f4",
+      "image_url": ["../images/pexels-senuscape-2313682.jpg","../images/chef1.jpg"],
+      "social_rank": 99.99999927351223,
+      "publisher_url": "http://www.mybakingaddiction.com",
+      "price":23,
+      "discount":0,
+      "newProduct":true,
+      "bestSeller":true,
+      "category":"pasta"
+    },
+    {
+      "publisher": "Simply Recipes",
+      "title": "How to Grill Pizza",
+      "source_url": "http://www.simplyrecipes.com/recipes/how_to_grill_pizza/",
+      "recipe_id": "36476",
+      "image_url": "http://forkify-api.herokuapp.com/images/howtogrillpizzad300x20086a60e1b.jpg",
+      "social_rank": 99.99999704095504,
+      "publisher_url": "http://simplyrecipes.com",
+      "price":32,
+      "discount":4.5,
+      "newProduct":false,
+      "bestSeller":true
+    },
+    {
+      "publisher": "The Pioneer Woman",
+      "title": "PW’s Favorite Pizza",
+      "source_url": "http://thepioneerwoman.com/cooking/2010/02/my-favorite-pizza/",
+      "recipe_id": "47161",
+      "image_url": "http://forkify-api.herokuapp.com/images/4364270576_302751a2a4f3c1.jpg",
+      "social_rank": 99.99999689667648,
+      "publisher_url": "http://thepioneerwoman.com",
+      "price":18,
+      "discount":0,
+      "newProduct":false,
+      "bestSeller":false
+    },
+    {
+      "publisher": "My Baking Addiction",
+      "title": "Barbecue Chicken Pizza",
+      "source_url": "http://www.mybakingaddiction.com/barbecue-chicken-pizza-recipe/",
+      "recipe_id": "a723e8",
+      "image_url": "http://forkify-api.herokuapp.com/images/BBQChickenPizza3e2b.jpg",
+      "social_rank": 99.9999968917598,
+      "publisher_url": "http://www.mybakingaddiction.com",
+      "price":16,
+      "discount":0,
+      "newProduct":false,
+      "bestSeller":true
+    },
+    {
+      "publisher": "Two Peas and Their Pod",
+      "title": "Avocado Pita Pizza with Cilantro Sauce",
+      "source_url": "http://www.twopeasandtheirpod.com/avocado-pita-pizza-with-cilantro-sauce/",
+      "recipe_id": "54388",
+      "image_url": "http://forkify-api.herokuapp.com/images/avocadopizzawithcilantrosauce4bf5.jpg",
+      "social_rank": 99.99999665701256,
+      "publisher_url": "http://www.twopeasandtheirpod.com",
+      "price":109,
+      "discount":0,
+      "newProduct":false,
+      "bestSeller":false
+    },
+    {
+      "publisher": "What's Gaby Cooking",
+      "title": "Pizza Monkey Bread",
+      "source_url": "http://whatsgabycooking.com/pizza-monkey-bread/",
+      "recipe_id": "ead4e0",
+      "image_url": "http://forkify-api.herokuapp.com/images/PizzaMonkeyBread67f8.jpg",
+      "social_rank": 99.99999570141472,
+      "publisher_url": "http://whatsgabycooking.com",
+      "price":110,
+      "discount":5.5,
+      "newProduct":false,
+      "bestSeller":true
+    },
+    {
+      "publisher": "The Pioneer Woman",
+      "title": "Supreme Pizza Burgers",
+      "source_url": "http://thepioneerwoman.com/cooking/2012/10/supreme-pizza-burgers/",
+      "recipe_id": "46892",
+      "image_url": "http://forkify-api.herokuapp.com/images/burger53be.jpg",
+      "social_rank": 99.99999283988569,
+      "publisher_url": "http://thepioneerwoman.com",
+      "price":150,
+      "discount":15,
+      "newProduct":false,
+      "bestSeller":true
+    },
+    {
+      "publisher": "Closet Cooking",
+      "title": "Balsamic Strawberry and Chicken Pizza with Sweet Onions and Smoked Bacon",
+      "source_url": "http://www.closetcooking.com/2012/07/balsamic-strawberry-and-chicken-pizza.html",
+      "recipe_id": "35128",
+      "image_url": "http://forkify-api.herokuapp.com/images/Strawberry2BBalsamic2BPizza2Bwith2BChicken252C2BSweet2BOnion2Band2BSmoked2BBacon2B5002B300939d125e2.jpg",
+      "social_rank": 99.99998682928603,
+      "publisher_url": "http://closetcooking.com",
+      "price":100,
+      "discount":0,
+      "newProduct":false,
+      "bestSeller":false
+    }
+  
+
+]
